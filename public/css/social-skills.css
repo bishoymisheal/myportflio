@@ -1,0 +1,194 @@
+/* ===== PAGE HEADERS ===== */
+.page-header {
+    text-align: center;
+    padding: 3rem 0;
+}
+
+.page-header h1 {
+    font-size: 2.8rem;
+    color: var(--accent-primary);
+    background: none;
+    -webkit-background-clip: unset;
+    background-clip: unset;
+    -webkit-text-fill-color: unset;
+}
+
+.page-header p {
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+    margin-top: 0.5rem;
+}
+
+/* ===== SOCIAL GRID ===== */
+.social-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem 0;
+}
+
+.social-card {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 2rem;
+    text-align: center;
+    color: var(--text-color);
+    text-decoration: none;
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.social-card i {
+    font-size: 2.5rem;
+    color: var(--accent-primary);
+    transition: var(--transition);
+}
+
+.social-card h3 {
+    font-size: 1.1rem;
+    margin-top: 0.3rem;
+    font-weight: 600;
+}
+
+.social-card p {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+}
+
+/* Social Brands */
+.social-card.facebook:hover { border-color: #1877F2; }
+.social-card.facebook:hover i { color: #1877F2; }
+.social-card.instagram:hover { border-color: #E4405F; }
+.social-card.instagram:hover i { color: #E4405F; }
+.social-card.whatsapp:hover { border-color: #25D366; }
+.social-card.whatsapp:hover i { color: #25D366; }
+.social-card.linkedin:hover { border-color: #0A66C2; }
+.social-card.linkedin:hover i { color: #0A66C2; }
+.social-card.tiktok:hover { border-color: #000000; }
+.social-card.tiktok:hover i { color: #000000; }
+.social-card.telegram:hover { border-color: #0088cc; }
+.social-card.telegram:hover i { color: #0088cc; }
+
+.social-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* ===== SMALL SOCIAL ICONS (Row Layout) ===== */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.social-icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    font-size: 1.3rem;
+    text-decoration: none;
+    transition: var(--transition);
+    box-shadow: var(--shadow-sm);
+}
+
+.social-icon:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--accent-secondary);
+    color: var(--accent-primary);
+}
+
+.social-icon i {
+    transition: color 0.3s ease;
+}
+
+.social-icon.facebook:hover i { color: #1877F2; }
+.social-icon.instagram:hover i { color: #E4405F; }
+.social-icon.whatsapp:hover i { color: #25D366; }
+.social-icon.linkedin:hover i { color: #0A66C2; }
+.social-icon.tiktok:hover i { color: #000000; }
+.social-icon.telegram:hover i { color: #0088cc; }
+
+.social-icon.facebook:hover { border-color: #1877F2; }
+.social-icon.instagram:hover { border-color: #E4405F; }
+.social-icon.whatsapp:hover { border-color: #25D366; }
+.social-icon.linkedin:hover { border-color: #0A66C2; }
+.social-icon.tiktok:hover { border-color: #000000; }
+.social-icon.telegram:hover { border-color: #0088cc; }
+
+/* ===== SKILLS CONTAINER ===== */
+.skills-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    padding: 0;
+}
+
+.skill-category {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 2rem;
+    box-shadow: var(--shadow-sm);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+}
+
+.skill-category h2 {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-weight: 700;
+}
+
+.skill-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+.skill-pill {
+    background: var(--bg-color);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    padding: 0.6rem 1.4rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.92rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    transition: var(--transition);
+    cursor: default;
+}
+
+.skill-pill i {
+    font-size: 1.1rem;
+    color: var(--accent-secondary);
+}
+
+.skill-pill:hover {
+    background: var(--gradient-primary);
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+    border-color: transparent;
+}
+.skill-pill:hover i { color: #fff; }
