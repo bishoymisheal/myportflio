@@ -627,6 +627,47 @@ nav a:hover::after {
     box-shadow: var(--shadow-glow);
 }
 
+.btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.8rem 1.8rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-color) !important;
+    -webkit-text-fill-color: var(--text-color) !important;
+    background: rgba(15, 20, 35, 0.7);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-sm);
+    text-decoration: none;
+    transition: var(--transition);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    cursor: pointer;
+}
+
+.btn-secondary i {
+    color: var(--accent-primary) !important;
+    -webkit-text-fill-color: var(--accent-primary) !important;
+    transition: var(--transition);
+    font-size: 1rem;
+}
+
+.btn-secondary:hover {
+    background: rgba(6, 182, 212, 0.15);
+    border-color: var(--accent-primary);
+    color: #fff !important;
+    -webkit-text-fill-color: #fff !important;
+    transform: translateY(-2px);
+    box-shadow: 0 0 20px rgba(6, 182, 212, 0.25);
+}
+
+.btn-secondary:hover i {
+    color: #fff !important;
+    -webkit-text-fill-color: #fff !important;
+    transform: scale(1.1);
+}
+
 /* ── Hamburger Button ── */
 .mobile-menu-btn {
     display: none;
