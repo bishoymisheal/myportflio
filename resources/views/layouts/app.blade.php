@@ -49,44 +49,31 @@
 
     <header>
         <div class="header-container">
-            <a href="/" class="logo">
+            <a href="#hero" class="logo">
                 <i class="fas fa-code"></i>
                 <span style="font-weight: 800; font-family: 'Space Grotesk', 'Inter', sans-serif;">Bishoy<span style="color: var(--accent-secondary); font-size: 1.3rem;">.</span></span>
             </a>
 
             <!-- Mobile Menu Toggle Button -->
-            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu">
                 <i class="fas fa-bars" id="menuIcon"></i>
             </button>
 
             <div class="nav-menu" id="navMenu">
                 <nav id="navbar">
                     <ul>
-                        <li><a href="/">Home</a></li>
-                        <li><a href="/#about">About</a></li>
-                        <li><a href="/#projects">Projects</a></li>
-                        <li><a href="/#skills">Skills</a></li>
-                        <li><a href="/#contact">Contact</a></li>
+                        <li><a href="#hero" class="nav-link active">Home</a></li>
+                        <li><a href="#about" class="nav-link">About</a></li>
+                        <li><a href="#skills" class="nav-link">Skills</a></li>
+                        <li><a href="#qualifications" class="nav-link">Qualifications</a></li>
+                        <li><a href="#projects" class="nav-link">Projects</a></li>
+                        <li><a href="#social-media" class="nav-link">Social</a></li>
                     </ul>
                 </nav>
 
-                @auth
-                    {{-- User greeting + logout --}}
-                    <div class="header-user">
-                        <span class="header-user-name">
-                            <i class="fas fa-user-circle"></i>
-                            {{ Auth::user()->name }}
-                        </span>
-                        <form action="/logout" method="POST" style="display:inline;">
-                            @csrf
-                            <button type="submit" class="header-logout-btn">
-                                <i class="fas fa-sign-out-alt"></i> Logout
-                            </button>
-                        </form>
-                    </div>
-                @else
-                    <a href="/login" class="header-cta"><i class="fas fa-sign-in-alt"></i> Sign In</a>
-                @endauth
+                <a href="#social-media" class="header-cta">
+                    <i class="fas fa-share-nodes"></i> Connect
+                </a>
             </div>
         </div>
     </header>
@@ -96,10 +83,12 @@
     </main>
 
     <footer>
-        <p>&copy; {{ date('Y') }} Bishoy Misheal. All rights reserved.</p>
+        <div class="footer-content" style="text-align: center; padding: 2.5rem 1rem;">
+            <p style="color: var(--text-secondary); font-size: 0.95rem;">&copy; {{ date('Y') }} Bishoy Misheal. Crafted with precision & passion.</p>
+        </div>
     </footer>
 
-    {{-- ===== FIXED SOCIAL SIDEBAR (bottom-right, always visible) ===== --}}
+    {{-- ===== FIXED COMPACT SOCIAL SIDEBAR (bottom-right) ===== --}}
     <div class="floating-socials" id="floatingSocials">
         <a href="https://www.facebook.com/share/1DoW8NwVRe/"
            class="fs-icon fs-facebook" title="Facebook" target="_blank" rel="noopener">
@@ -133,52 +122,5 @@
     </div>
 
     <script src="{{ asset('js/script.js') }}"></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const floatingSocials = document.getElementById('floatingSocials');
-            const footer = document.querySelector('footer');
-            const socialMediaSection = document.getElementById('social-media');
-            
-            if (floatingSocials) {
-                // Track visibility state
-                let footerVisible = false;
-                let socialVisible = false;
-
-                const updateFloatingSidebar = () => {
-                    if (footerVisible || socialVisible) {
-                        floatingSocials.classList.add('fs-hidden');
-                    } else {
-                        floatingSocials.classList.remove('fs-hidden');
-                    }
-                };
-
-                const observer = new IntersectionObserver((entries) => {
-                    entries.forEach(entry => {
-                        if (entry.target === footer) {
-                            footerVisible = entry.isIntersecting;
-                        }
-                        if (entry.target === socialMediaSection) {
-                            socialVisible = entry.isIntersecting;
-                        }
-                    });
-                    updateFloatingSidebar();
-                }, { root: null, threshold: 0.05 });
-                
-                if (footer) observer.observe(footer);
-                if (socialMediaSection) observer.observe(socialMediaSection);
-            }
-            // ── Header scroll effect ──
-            const header = document.querySelector('header');
-            if (header) {
-                window.addEventListener('scroll', () => {
-                    if (window.scrollY > 50) {
-                        header.classList.add('header-scrolled');
-                    } else {
-                        header.classList.remove('header-scrolled');
-                    }
-                }, { passive: true });
-            }
-        });
-    </script>
 </body>
 </html>

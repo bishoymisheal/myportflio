@@ -1,11 +1,11 @@
 /* ===== PAGE HEADERS ===== */
 .page-header {
     text-align: center;
-    padding: 3rem 0;
+    padding: 2.5rem 0 1.5rem;
 }
 
 .page-header h1 {
-    font-size: 2.8rem;
+    font-size: 2.4rem;
     color: var(--accent-primary);
     background: none;
     -webkit-background-clip: unset;
@@ -15,124 +15,134 @@
 
 .page-header p {
     color: var(--text-secondary);
-    font-size: 1.05rem;
-    margin-top: 0.5rem;
+    font-size: 1rem;
+    margin-top: 0.4rem;
 }
 
-/* ===== SOCIAL GRID ===== */
-.social-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1.5rem;
-    padding: 2rem 0;
-}
-
-.social-card {
-    background: var(--bg-secondary);
-    border: 1px solid var(--border-color);
-    border-radius: var(--radius-md);
-    padding: 2rem;
+/* ===== SOCIAL MEDIA SECTION — COMPACT ICONS (MATCHING SIDEBAR) ===== */
+#social-media {
     text-align: center;
-    color: var(--text-color);
-    text-decoration: none;
-    transition: var(--transition);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.8rem;
-    box-shadow: var(--shadow-sm);
+    padding: 3rem 1rem;
 }
 
-.social-card i {
-    font-size: 2.5rem;
-    color: var(--accent-primary);
-    transition: var(--transition);
-}
-
-.social-card h3 {
-    font-size: 1.1rem;
-    margin-top: 0.3rem;
-    font-weight: 600;
-}
-
-.social-card p {
-    font-size: 0.88rem;
-    color: var(--text-muted);
-}
-
-/* Social Brands */
-.social-card.facebook:hover { border-color: #1877F2; }
-.social-card.facebook:hover i { color: #1877F2; }
-.social-card.instagram:hover { border-color: #E4405F; }
-.social-card.instagram:hover i { color: #E4405F; }
-.social-card.whatsapp:hover { border-color: #25D366; }
-.social-card.whatsapp:hover i { color: #25D366; }
-.social-card.linkedin:hover { border-color: #0A66C2; }
-.social-card.linkedin:hover i { color: #0A66C2; }
-.social-card.tiktok:hover { border-color: #000000; }
-.social-card.tiktok:hover i { color: #000000; }
-.social-card.telegram:hover { border-color: #0088cc; }
-.social-card.telegram:hover i { color: #0088cc; }
-
-.social-card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-lg);
-}
-
-/* ===== SMALL SOCIAL ICONS (Row Layout) ===== */
-.social-icons {
+.social-icons-wrapper {
     display: flex;
     justify-content: center;
-    gap: 1rem;
+    align-items: center;
+    gap: 0.9rem;
     flex-wrap: wrap;
+    margin-top: 1.5rem;
 }
 
-.social-icon {
-    display: inline-flex;
-    justify-content: center;
+.social-btn {
+    position: relative;
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    display: flex;
     align-items: center;
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    background: var(--bg-secondary);
-    border: 1px solid var(--border-color);
-    color: var(--text-secondary);
-    font-size: 1.3rem;
+    justify-content: center;
     text-decoration: none;
-    transition: var(--transition);
-    box-shadow: var(--shadow-sm);
+    font-size: 1.05rem;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    background: rgba(15, 20, 35, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: var(--text-color);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
-.social-icon:hover {
-    transform: translateY(-3px);
-    box-shadow: var(--shadow-md);
-    border-color: var(--accent-secondary);
-    color: var(--accent-primary);
+.social-btn i {
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
-.social-icon i {
-    transition: color 0.3s ease;
+.social-btn:hover {
+    transform: translateY(-4px) scale(1.1);
 }
 
-.social-icon.facebook:hover i { color: #1877F2; }
-.social-icon.instagram:hover i { color: #E4405F; }
-.social-icon.whatsapp:hover i { color: #25D366; }
-.social-icon.linkedin:hover i { color: #0A66C2; }
-.social-icon.tiktok:hover i { color: #000000; }
-.social-icon.telegram:hover i { color: #0088cc; }
+.social-btn.facebook:hover {
+    background: #1877F2;
+    color: #fff;
+    border-color: #1877F2;
+    box-shadow: 0 0 20px rgba(24, 119, 242, 0.45);
+}
 
-.social-icon.facebook:hover { border-color: #1877F2; }
-.social-icon.instagram:hover { border-color: #E4405F; }
-.social-icon.whatsapp:hover { border-color: #25D366; }
-.social-icon.linkedin:hover { border-color: #0A66C2; }
-.social-icon.tiktok:hover { border-color: #000000; }
-.social-icon.telegram:hover { border-color: #0088cc; }
+.social-btn.instagram:hover {
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    color: #fff;
+    border-color: #dc2743;
+    box-shadow: 0 0 20px rgba(220, 39, 67, 0.45);
+}
+
+.social-btn.whatsapp:hover {
+    background: #25D366;
+    color: #fff;
+    border-color: #25D366;
+    box-shadow: 0 0 20px rgba(37, 211, 102, 0.45);
+}
+
+.social-btn.linkedin:hover {
+    background: #0A66C2;
+    color: #fff;
+    border-color: #0A66C2;
+    box-shadow: 0 0 20px rgba(10, 102, 194, 0.45);
+}
+
+.social-btn.tiktok:hover {
+    background: #000000;
+    color: #00f2fe;
+    border-color: #00f2fe;
+    box-shadow: 0 0 20px rgba(0, 242, 254, 0.45);
+}
+
+.social-btn.telegram:hover {
+    background: #0088cc;
+    color: #fff;
+    border-color: #0088cc;
+    box-shadow: 0 0 20px rgba(0, 136, 204, 0.45);
+}
+
+/* Tooltip for section icons */
+.social-btn .social-tooltip {
+    position: absolute;
+    bottom: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%) translateY(4px);
+    background: rgba(10, 10, 15, 0.95);
+    backdrop-filter: blur(8px);
+    color: #fff;
+    font-size: 0.72rem;
+    font-weight: 600;
+    white-space: nowrap;
+    padding: 0.25rem 0.6rem;
+    border-radius: 6px;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.social-btn .social-tooltip::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 4px solid transparent;
+    border-top-color: rgba(10, 10, 15, 0.95);
+}
+
+.social-btn:hover .social-tooltip {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
 
 /* ===== SKILLS CONTAINER ===== */
 .skills-container {
     display: flex;
     flex-direction: column;
-    gap: 2.5rem;
+    gap: 2rem;
     padding: 0;
 }
 
@@ -140,15 +150,15 @@
     background: var(--bg-secondary);
     border: 1px solid var(--border-color);
     border-radius: var(--radius-md);
-    padding: 2rem;
+    padding: 1.8rem;
     box-shadow: var(--shadow-sm);
     backdrop-filter: var(--glass-blur);
     -webkit-backdrop-filter: var(--glass-blur);
 }
 
 .skill-category h2 {
-    font-size: 1.3rem;
-    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+    margin-bottom: 1.2rem;
     background: var(--gradient-primary);
     -webkit-background-clip: text;
     background-clip: text;
@@ -161,26 +171,26 @@
 .skill-items {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.8rem;
+    gap: 0.7rem;
 }
 
 .skill-pill {
     background: var(--bg-color);
     color: var(--text-color);
     border: 1px solid var(--border-color);
-    padding: 0.6rem 1.4rem;
+    padding: 0.5rem 1.2rem;
     border-radius: var(--radius-sm);
-    font-size: 0.92rem;
+    font-size: 0.88rem;
     font-weight: 500;
     display: flex;
     align-items: center;
-    gap: 0.6rem;
+    gap: 0.5rem;
     transition: var(--transition);
     cursor: default;
 }
 
 .skill-pill i {
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: var(--accent-secondary);
 }
 
