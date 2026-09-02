@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Bishoy Misheal — Full-Stack Web Developer. Building modern, high-performance web applications with cutting-edge technologies.">
-    <title>Bishoy Misheal — Full-Stack Developer</title>
+    <meta name="description" content="Bishoy Miechel — Full-Stack Web Developer. Building modern, high-performance web applications with cutting-edge technologies.">
+    <title>Bishoy Miechel — Full-Stack Developer</title>
     <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
     <link rel="stylesheet" href="{{ asset('css/social-skills.css') }}">
     <link rel="stylesheet" href="{{ asset('css/floating-socials.css') }}">
@@ -84,7 +84,7 @@
 
     <footer>
         <div class="footer-content" style="text-align: center; padding: 2.5rem 1rem;">
-            <p style="color: var(--text-secondary); font-size: 0.95rem;">&copy; {{ date('Y') }} Bishoy Misheal. Crafted with precision & passion.</p>
+            <p style="color: var(--text-secondary); font-size: 0.95rem;">&copy; {{ date('Y') }} Bishoy Miechel. Crafted with precision & passion.</p>
         </div>
     </footer>
 

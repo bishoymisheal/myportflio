@@ -7,7 +7,7 @@
             <span class="badge">
                 <i class="fas fa-circle" style="font-size: 0.5rem; color: #48BB78;"></i> Available for Hire & Projects
             </span>
-            <h1>Hello, I'm Bishoy Misheal</h1>
+            <h1>Hello, I'm Bishoy Miechel</h1>
             <h2>Full-Stack <span class="gradient-text">Web Developer</span></h2>
             <p>I design and build modern, scalable, and high-performance web applications using cutting-edge frontend and backend technologies. Focused on clean code, seamless user experiences, and robust architectures.</p>
             
@@ -22,7 +22,7 @@
         </div>
 
         <div class="photo-wrapper">
-            <img src="{{ asset('img/photo.jpeg') }}" alt="Bishoy Misheal" class="profile-photo" onerror="this.onerror=null; this.src='{{ asset('img/myphoto.jpeg') }}';">
+            <img src="{{ asset('img/photo.jpeg') }}" alt="Bishoy Miechel" class="profile-photo" onerror="this.onerror=null; this.src='{{ asset('img/myphoto.jpeg') }}';">
             <div class="orbit-ring"></div>
             <div class="orbit-dot orbit-dot-1"></div>
             <div class="orbit-dot orbit-dot-2"></div>
